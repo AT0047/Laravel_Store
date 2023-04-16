@@ -378,13 +378,14 @@ main .recent-orders table{
     text-align: center;
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
+    line-height: 4rem;
 }
 main .recent-orders table:hover{
     box-shadow: none;
 
 }
 main table tbody td{
-    height: 2.8rem;
+    /* height: 2.8rem; */
     border-bottom: 1px solid var(--color-light);
     color: var(--color-dark-variant);
 }
@@ -691,4 +692,56 @@ main .recent-orders a{
         font-size: 2rem;
     }
 
+}
+
+/* ------------user_pages---------------- */
+
+.adduser{
+    position: relative;
+    float: right;
+    /* margin-left: -50px; */
+    padding: 0.6rem;
+}
+.adduser span{
+    background: var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-white);
+    padding: 0.6rem;
+    transition: all 300ms ease;
+}
+.adduser span:hover{
+    cursor: pointer;
+    padding: 0.9rem;
+    box-shadow: 0 1rem 2rem #00000070;
+
+}
+.actionsicn{
+    /* display: inline-block; */
+    text-align: center;
+    transition: all 300ms ease;
+}
+.actionsicn1{
+    background: var(--color-danger);
+    color: var(--color-white);
+    border-radius: 50%;
+    padding: 0.6rem;
+}
+.actionsicn2{
+    background: var(--color-success);
+    color: var(--color-white);
+    border-radius: 50%;
+    padding: 0.6rem;
+    margin-left: 20px;
+}
+
+.actionsicn1:hover{
+    
+    cursor: pointer;
+    box-shadow: 0 1rem 1rem #00000030;
+   
+}
+
+.actionsicn2:hover{
+    cursor: pointer;
+    box-shadow: 0 1rem 1rem #00000030;
 }

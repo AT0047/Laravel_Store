@@ -15,29 +15,29 @@
     <div class="container">
         <aside>
             <div class="top">
-                <div class="logo">
+                <a href="{{ route('home') }}"><div class="logo">
                     <img src="images/Logo.png">
                     <h2 class="text-muted">ANZ <span class="danger">AHA</span></h2>
-                </div>
+                </div></a>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">close</span>
                 </div>
             </div>
             <!-- ---------sidebar------------- -->
             <div class="sidebar">
-                    <a href="#" class="active">
+                    <a href="{{ route('home') }}" class="active">
                         <span class="material-icons-sharp">grid_view</span>
                         <h3>Dashboard</h3>
                     </a>
-                    <a href="#">
+                    <a href="{{ route('catigories.index') }}">
                     <span class="material-icons-sharp">inventory</span>
                         <h3>Catigroy</h3>
                     </a>
-                    <a href="#">
+                    <a href="{{ route('products.index') }}">
                     <span class="material-icons-sharp">category</span>
                         <h3>Products</h3>
                     </a>
-                    <a href="#" >
+                    <a href="{{ route('users.index') }}" >
                         <span class="material-icons-sharp">people</span>
                         <h3>Users</h3>
                     </a>
