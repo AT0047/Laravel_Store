@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CatigoryrController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -26,11 +26,22 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('users')->as('users.')->group(function (){
     Route::get('/',[UserController::class,'index'])->name('index');
+    Route::delete('delete/{id}', [UserController::class,'delete'])->name('delete');
+    Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
+    Route::patch('/update/{id}', [UserController::class, 'update'])->name('update');
 });
 
-Route::prefix('catigories')->as('catigories.')->group(function (){
-    Route::get('/',[CatigoryrController::class,'index'])->name('index');
+
+
+Route::prefix('categories')->as('categories.')->group(function (){
+    Route::get('/', [CategoryController::class, 'index'])->name('index');
+    Route::delete('delete/{id}', [CategoryController::class,'delete'])->name('delete');
+    Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('edit');
+    Route::patch('/update/{id}', [CategoryController::class, 'update'])->name('update');
+
 });
+
+
 
 Route::prefix('products')->as('products.')->group(function (){
     Route::get('/',[ProductController::class,'index'])->name('index');

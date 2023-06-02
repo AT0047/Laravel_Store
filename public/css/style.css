@@ -400,7 +400,7 @@ main table tbody tr:last-child td{
 main .recent-orders a{
     text-align: center;
     display: block;
-    margin: 1rem auto;
+    margin: 0rem auto;
     color: var(--color-primary);
 }
 
@@ -716,7 +716,7 @@ main .recent-orders a{
 
 }
 .actionsicn{
-    /* display: inline-block; */
+    display: flex;
     text-align: center;
     transition: all 300ms ease;
 }
@@ -731,17 +731,61 @@ main .recent-orders a{
     color: var(--color-white);
     border-radius: 50%;
     padding: 0.6rem;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .actionsicn1:hover{
-    
     cursor: pointer;
     box-shadow: 0 1rem 1rem #00000030;
-   
 }
 
 .actionsicn2:hover{
     cursor: pointer;
     box-shadow: 0 1rem 1rem #00000030;
+}
+.formbtn{
+    margin-left: 10px;
+}
+.messages{
+    margin-left: 31px;
+    font-size: 26px;
+}
+
+.frmbg{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    line-height: 4rem;
+}
+.frmcontnr{
+    position: relative;
+    width: 427px;
+}
+
+.frminpt{
+    background: var(--color-background);
+    height: 48px;
+    width: 298px;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid var(--border-bottom);
+    outline: none;
+}
+/* .frmlab{
+    position: absolute;
+    margin-left:10px;
+    font-size: 20px;
+}
+
+input:focus + label{
+    color: red;
+    font-size: 10px;
+} */
+.frmgrop{
+    position: relative;
+    margin-bottom: 1.25rem;
 }

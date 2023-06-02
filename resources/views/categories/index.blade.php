@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
-        <div class="recent-orders">
-            <h2>Users({{ $count }})</h2>
+
+<div class="recent-orders">
+            <h2>categories({{ $count }})</h2>
             @if (session()->has('message'))
                 <strong class="messages">{{session('message')}}</strong>
             @endif  
@@ -10,29 +11,27 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Email</th>
-                        <th>email_verified_at</th>
+                        <th>createdby</th>
                         <th>Created At</th>
                         <th>updated at</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($users as $key => $user)
+                    @forelse ($categories as $key => $category)
                         <tr>
-                            <td>{{$key + $users->firstItem()}}</td>
-                            <td>{{$user-> name}}</td>
-                            <td>{{$user-> email}}</td>
-                            <td class="tdfnt primary">{{$user-> updated_at->diffForHumans()}}</td>
-                            <td class="tdfnt primary">{{ \Carbon\Carbon::parse($user->email_verified_at)->diffForHumans() }}</td>
-                            <td class="warning">{{$user-> created_at->diffForHumans()}}</td>
+                            <td>{{$key + $categories->firstItem()}}</td>
+                            <td>{{$category-> Name}}</td>
+                            <td>{{$category-> create_by}}</td>
+                            <td class="tdfnt primary">{{$category-> updated_at->diffForHumans()}}</td>
+                            <td class="warning">{{$category-> created_at->diffForHumans()}}</td>
                             <td class="actionsicn">
-                                <form action="{{route('users.delete', $user-> id)}}" method="post"  class="formbtn">
+                                <form action="{{route('categories.delete', $category-> id)}}" method="post"  class="formbtn">
                                     @csrf
                                     @method('delete')
-                                <button class="material-icons-sharp actionsicn1">delete</button>
+                                    <button class="material-icons-sharp actionsicn1">delete</button>
                                 </form>
-                                <a href="{{route('users.edit', $user->id)}}" role="button">
+                                <a href="{{route('categories.edit', $category->id)}}" role="button">
                                     <span class="material-icons-sharp actionsicn2">edit_note</span>
                                 </a>
                             </td>
@@ -46,4 +45,5 @@
             </table>
             <a href="#">Show ALL</a>
         </div>
+
 @endsection

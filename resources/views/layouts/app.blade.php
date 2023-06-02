@@ -8,7 +8,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
     rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
@@ -16,7 +16,7 @@
         <aside>
             <div class="top">
                 <a href="{{ route('home') }}"><div class="logo">
-                    <img src="images/Logo.png">
+                    <img src="/images/Logo.png">
                     <h2 class="text-muted">ANZ <span class="danger">AHA</span></h2>
                 </div></a>
                 <div class="close" id="close-btn">
@@ -29,7 +29,7 @@
                         <span class="material-icons-sharp">grid_view</span>
                         <h3>Dashboard</h3>
                     </a>
-                    <a href="{{ route('catigories.index') }}">
+                    <a href="{{ route('categories.index') }}">
                     <span class="material-icons-sharp">inventory</span>
                         <h3>Catigroy</h3>
                     </a>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="profile-photo">
-                    <img src="images/profile.png">
+                    <img src="/images/profile.png">
                 </div>
             </div>
             <!-- /* ---------Right side updates------------- */ -->
@@ -94,7 +94,7 @@
                 <div class="updates">
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="images/profile2.jpg">
+                            <img src="/images/profile2.jpg">
                         </div>
                         <div class="message">
                             <p><b>Mike Tyson</b>received his order of night lion tech GPS drone</p>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="images/profile3.jpg">
+                            <img src="/images/profile3.jpg">
                         </div>
                         <div class="message">
                             <p><b>Mike Tyson</b>received his order of night lion tech GPS drone</p>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="images/profile4.jpg">
+                            <img src="/images/profile4.jpg">
                         </div>
                         <div class="message">
                             <p><b>Mike Tyson</b>received his order of night lion tech GPS drone</p>
@@ -173,6 +173,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>

@@ -2,6 +2,9 @@ const menuBtn = document.getElementById("menu-btn");
 const closeBtn = document.getElementById("close-btn");
 const sideMenu = document.querySelector("aside");
 const themeToggler = document.querySelector(".theme-toggler");
+const sidebar = document.querySelectorAll("a");
+
+
 
 menuBtn.addEventListener('click', ()=>{
     sideMenu.style.display = 'block';
@@ -19,3 +22,4 @@ themeToggler.addEventListener('click',()=>{
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
     
 })
+
